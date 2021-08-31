@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "229741132475",
+    "project_id": "pastryapp-e8c69",
+    "storage_bucket": "pastryapp-e8c69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229741132475:android:ea991cc6503215f2a5479e",
+        "android_client_info": {
+          "package_name": "com.example.pastryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229741132475-mpmdmq2sekfd0lqvrl5ejo9bf8uo77u9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8CpDtn1z-fHdes_0-de6UNt2Fw0dQRWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229741132475-mpmdmq2sekfd0lqvrl5ejo9bf8uo77u9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

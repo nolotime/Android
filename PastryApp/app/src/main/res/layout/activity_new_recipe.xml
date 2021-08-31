@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewRecipeActivity"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share your favorite recipe with others"
+                android:layout_gravity="center"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/recipeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_margin="5dp"
+                android:ems="10"
+                android:hint="Recipe Name"
+                android:inputType="textPersonName" />
+
+            <RelativeLayout
+                android:id="@+id/ingredients"
+                android:padding="5dp"
+                android:layout_below="@+id/recipeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recipeIngridients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/ingridients_layout"
+                    tools:itemCount="0"/>
+
+                <include
+                    android:id="@+id/ingridients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recipeIngridients"
+                    layout="@layout/new_ingridient_layout"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ingridients"
+                    android:onClick="addNewIngridient"
+                    android:text="Add Ingridient" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/steps"
+                android:layout_below="@+id/ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recipeSteps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/steps_layout"
+                    tools:itemCount="0"/>
+
+                <include
+                    android:id="@+id/allSteps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recipeSteps"
+                    layout="@layout/new_step_layout"/>
+
+                <Button
+                    android:layout_below="@+id/allSteps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="addNewStep"
+                    android:text="Add Step"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+                <Button
+                    android:id="@+id/photoBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Photo"/>
+                <TextView
+                    android:id="@+id/photoET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose a file"
+                    tools:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/photoIV"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:visibility="gone"
+                />
+            <Button
+                android:id="@+id/shareBtn"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_below="@+id/steps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="saveRecipe"
+                android:text="Share"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
